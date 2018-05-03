@@ -9,6 +9,7 @@
 	<modules>
 		<module>standalone</module>
         <module>api</module>
+		<module>standalone</module>
 		<module>standalone2</module>
 	</modules>
 	<packaging>pom</packaging>
