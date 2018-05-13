@@ -8,6 +8,6 @@ import com.milaboratory.mitoola.api.TestApiService;
 public class TestApiServiceImpl implements TestApiService {
   @Override
   public String hello(String name) {
-    return String.format("Hello %s!", name == null ? "anonymous" : name);
+    return String.format("[{\"message\"=\"Hello %s!\"}]", name == null ? "anonymous" : name);
   }
 }
