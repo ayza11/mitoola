@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  */
 public class JaxrsApplication extends ResourceConfig {
 
-    private static List<String> WS_CLASSES_PACKAGES = Arrays.asList(
+    private static List<String> PACKAGES_WITH_WS_CLASSES = Arrays.asList(
             "com.milaboratory.mitoola.ws"
     );
 
@@ -26,8 +26,7 @@ public class JaxrsApplication extends ResourceConfig {
      */
     public JaxrsApplication() {
         register(RequestContextFilter.class);
-
-        StreamEx.of(WS_CLASSES_PACKAGES)
+        StreamEx.of(PACKAGES_WITH_WS_CLASSES)
                 .map(JaxrsApplication::findClassesByPackage)
                 .flatMap(List::stream)
                 .forEach(super::register);
@@ -42,13 +41,15 @@ public class JaxrsApplication extends ResourceConfig {
         // get matching classes defined in the package
         Set<BeanDefinition> classes = provider.findCandidateComponents(packageName);
         return StreamEx.of(classes)
-                .map(def -> {
-                    try {
-                        return (Class) (Class.forName(def.getBeanClassName()));
-                    } catch (ClassNotFoundException e) {
-                        throw new RuntimeException(e);
-                    }
-                })
+                .map(def -> forName(def.getBeanClassName()))
                 .toList();
+    }
+
+    private static Class forName(String clazzName) {
+        try {
+            return Class.forName(clazzName);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
