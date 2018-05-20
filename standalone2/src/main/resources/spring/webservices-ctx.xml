@@ -5,14 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
 
-    <bean class="com.milaboratory.mitoola.application.JettyFactory"/>
-
-    <context:component-scan base-package="com.milaboratory.mitoola.domain"/>
-
-    <!--import resource="database-ctx.xml"/-->
-    <import resource="webservices-ctx.xml"/>
-
+    <bean class="com.milaboratory.mitoola.ws.MyResource"/>
+    <bean class="com.milaboratory.mitoola.ws.TestApiServiceImpl"/>
 
 </beans>

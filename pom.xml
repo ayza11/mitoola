@@ -26,19 +26,25 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-
 		<spring-boot.version>2.0.1.RELEASE</spring-boot.version>
-		<spring.version>5.0.5.RELEASE</spring.version>
+		<jersey.version>2.27</jersey.version>
+		<!--spring.version>5.0.5.RELEASE</spring.version-->
 	</properties>
 
     <dependencyManagement>
 
 		<dependencies>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-jersey</artifactId>
-				<version>${spring-boot.version}</version>
-			</dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.ext</groupId>
+                <artifactId>jersey-spring4</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.media</groupId>
+                <artifactId>jersey-media-json-jackson</artifactId>
+                <version>${jersey.version}</version>
+            </dependency>
+
 			<dependency>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-core</artifactId>
@@ -48,6 +54,11 @@
 				<artifactId>postgresql</artifactId>
 				<scope>runtime</scope>
 			</dependency>
+            <dependency>
+                <groupId>one.util</groupId>
+                <artifactId>streamex</artifactId>
+                <version>0.6.6</version>
+            </dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-test</artifactId>
