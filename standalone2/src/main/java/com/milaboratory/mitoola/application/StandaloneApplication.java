@@ -12,9 +12,9 @@ import org.springframework.context.annotation.PropertySource;
 @EnableAutoConfiguration
 @ServletComponentScan
 @ImportResource("classpath:spring/application-ctx.xml")
-@PropertySource("classpath:properties/context.properties")
-public class Application {
+//@PropertySource("classpath:properties/context.properties")
+public class StandaloneApplication {
     public static void main(String[] args) {
-      SpringApplication.run(Application.class, args);
+      SpringApplication.run(StandaloneApplication.class, args);
     }
 }

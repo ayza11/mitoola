@@ -9,6 +9,8 @@
 	<modules>
         <module>api</module>
 		<module>standalone2</module>
+		<module>shell</module>
+		<module>commons</module>
 	</modules>
 	<packaging>pom</packaging>
 
@@ -44,6 +46,17 @@
                 <artifactId>jersey-media-json-jackson</artifactId>
                 <version>${jersey.version}</version>
             </dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.ext</groupId>
+				<artifactId>jersey-proxy-client</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>${jersey.version}</version>
+			</dependency>
+
 
 			<dependency>
 				<groupId>org.flywaydb</groupId>
@@ -65,7 +78,22 @@
                 <version>${spring-boot.version}</version>
 				<scope>test</scope>
 			</dependency>
-            <dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+			<dependency>
+				<groupId>org.jetbrains</groupId>
+				<artifactId>annotations</artifactId>
+				<version>16.0.2</version>
+			</dependency>
+
+
+			<dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>

@@ -30,6 +30,12 @@
             <artifactId>mitoola-api</artifactId>
             <version>${parent.version}</version>
         </dependency>
+        <!-- mitoola commons -->
+        <dependency>
+            <groupId>com.milaboratory</groupId>
+            <artifactId>mitoola-commons</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
 
         <!-- spring boot -->
         <dependency>
@@ -92,7 +98,7 @@
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
+        <!--dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
@@ -102,7 +108,7 @@
                     <artifactId>servlet-api</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

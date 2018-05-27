@@ -8,12 +8,8 @@
     <context:annotation-config/>
     <context:property-placeholder location="classpath:properties/context.properties"/>
 
-    <bean class="com.milaboratory.mitoola.application.JettyFactory"/>
+    <import resource="classpath:spring/mitoola-api.xml"/>
 
-    <context:component-scan base-package="com.milaboratory.mitoola.domain"/>
-
-    <!--import resource="database-ctx.xml"/-->
-    <import resource="webservices-ctx.xml"/>
-
+    <!--context:component-scan base-package="com.milaboratory.mitoola.domain"/-->
 
 </beans>
