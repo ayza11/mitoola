@@ -1,6 +1,6 @@
 package com.milaboratory.mitoola.ws;
 
-import com.milaboratory.mitoola.api.TestApiService;
+import com.milaboratory.mitoola.api.resource.TestApiService;
 import com.milaboratory.mitoola.api.dto.HelloDto;
 import com.milaboratory.mitoola.domain.StatefulCounter;
 import org.slf4j.Logger;

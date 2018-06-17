@@ -1,4 +1,4 @@
-package com.milaboratory.mitoola.api;
+package com.milaboratory.mitoola.api.resource;
 
 import com.milaboratory.mitoola.api.dto.HelloDto;
 
@@ -14,6 +14,6 @@ import javax.ws.rs.core.MediaType;
 @Path("/test")
 @Produces(MediaType.APPLICATION_JSON)
 public interface TestApiService {
-  @GET
-  HelloDto hello(@QueryParam("name") String name);
+    @GET
+    HelloDto hello(@QueryParam("name") String name);
 }

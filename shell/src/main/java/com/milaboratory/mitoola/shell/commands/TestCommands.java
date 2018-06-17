@@ -4,14 +4,11 @@ package com.milaboratory.mitoola.shell.commands;
  * @author Alexei Zakharov (ayza)
  */
 
-import com.milaboratory.mitoola.api.TestApiService;
+import com.milaboratory.mitoola.api.resource.TestApiService;
 import com.milaboratory.mitoola.util.json.JsonUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
-
-
-import static java.lang.System.out;
 
 @ShellComponent
 public class TestCommands {

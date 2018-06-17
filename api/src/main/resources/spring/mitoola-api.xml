@@ -6,7 +6,7 @@
 
     <bean id="testApiService" class="com.milaboratory.mitoola.util.spring.ProxyClientBuilderBean">
         <property name="address" value="${mitoola.api.host.url}/api"/>
-        <property name="serviceClass" value="com.milaboratory.mitoola.api.TestApiService"/>
+        <property name="serviceClass" value="com.milaboratory.mitoola.api.resource.TestApiService"/>
     </bean>
 
 </beans>
